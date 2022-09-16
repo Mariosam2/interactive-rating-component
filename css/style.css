@@ -1,0 +1,178 @@
+:root {
+    --var-very-dark-blue: hsl(216, 12%, 8%);
+    --var-dark-blue: hsl(213, 19%, 18%);
+    --var-light-blue: #273039;
+    --var-medium-grey: hsl(216, 12%, 54%);
+    --var-light-grey: hsl(217, 12%, 63%);
+    --var-white: hsl(0, 0%, 100%);
+    --var-orange: hsl(25, 97%, 53%);
+}
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+}
+
+body {
+    background-color: var(--var-very-dark-blue);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+.container {
+    width: 80%;
+    max-width: 1440px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    
+}
+
+
+/* Utility */
+
+.d-flex {
+    display: flex;
+}
+
+.center {
+    justify-content: center;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+
+/* #region main */
+
+.box {
+    width: calc(100%/3);
+    background-color: var(--var-dark-blue);
+    padding: 2rem;
+    border-radius: 18px;
+    color: var(--var-white);
+}
+
+.content p, .content h2, .content .buttons {
+    padding-bottom: 1rem;
+   
+}
+
+.content p {
+    font-size: 15px;
+    color: var(--var-medium-grey);
+}
+
+.content h2, #submit {
+    padding-top: 1rem;
+}
+
+#submit{
+    background-color: var(--var-orange);
+    color: white;
+    padding: 0.7rem 0;
+    border-radius: 18px;
+    transition: all 0.2s ease;
+    font-weight: 700;
+    line-height: 15px;
+    border: none;
+    
+    
+}
+
+
+
+#submit:hover {
+    background-color: var(--var-white);
+    color: var(--var-orange);
+    cursor: pointer;
+}
+
+.content >*, .content form >* {
+    width: 100%;
+}
+
+.star i {
+    color: var(--var-orange);
+
+}
+
+.buttons {
+    justify-content: space-between
+}
+
+.rating, .star i {
+    text-align: center;
+    line-height: 50px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: var(--var-light-blue);
+    transition: all 0.2s ease;
+}
+
+
+.rating:hover {
+    background-color: var(--var-light-grey);
+    cursor: pointer;
+}
+
+.rating:active, .active, .rating.active:hover {
+    background-color: var(--var-orange);
+    
+}
+
+
+.img img {
+    width: 60%;
+}
+
+.selected {
+    padding: 1rem 0;
+}
+
+#selected {
+    padding: 0.5rem 0.8rem;
+    color: var(--var-orange);
+    background-color: var(--var-very-dark-blue);
+    border-radius: 18px;
+}
+
+#thank_you h2, #thank_you p {
+    text-align: center;
+}
+
+
+/* #endregion */
+
+
+@media  screen and (max-width: 480px) {
+    .container {
+        width: 100%;
+    }
+    .box {
+        width: 80%;
+    }
+
+    .rating, .star i {
+        line-height: 40px;
+        width: 40px;
+        height: 40px;
+    }
+}
