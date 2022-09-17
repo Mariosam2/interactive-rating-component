@@ -43,6 +43,7 @@ img {
 
 .d-flex {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .center {
@@ -53,9 +54,6 @@ img {
     align-items: center;
 }
 
-.wrap {
-    flex-wrap: wrap;
-}
 
 
 /* #region main */
